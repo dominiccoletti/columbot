@@ -12,7 +12,7 @@ class Funny(Module):
         super().__init__()
         self.reddit = praw.Reddit(client_id=os.environ["REDDIT_CLIENT_ID"],
                                   client_secret=os.environ["REDDIT_SECRET"],
-                                  user_agent="yalebot")
+                                  user_agent="columbot")
 
     def response(self, query, message):
         if len(self.responses) == 0:
