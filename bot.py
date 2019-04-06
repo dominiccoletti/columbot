@@ -215,7 +215,7 @@ def manager():
             "name": request.form["name"] or "Columbot",
             "group_id": request.form["group_id"],
             "avatar_url": request.form["avatar_url"] or "https://i.groupme.com/310x310.jpeg.1c88aac983ff4587b15ef69c2649a09c",
-            "callback_url": "https://yalebot.herokuapp.com/",
+            "callback_url": "https://colum-bot.herokuapp.com/",
             "dm_notification": False,
         }
         me = requests.get(f"https://api.groupme.com/v3/users/me?token={access_token}").json()["response"]
