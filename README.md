@@ -1,4 +1,4 @@
-# Yalebot
+# Columbot
 [![Build Status](https://travis-ci.org/ErikBoesen/Yalebot.svg?branch=master)](https://travis-ci.org/ErikBoesen/Yalebot)
 
 > A GroupMe chatbot for the Columbia Class of 2023 group.
@@ -25,7 +25,7 @@ heroku config:set GROUPME_ACCESS_TOKEN=abcdef12345  # obtained from dev.groupme.
 After that, simply push the code via Heroku CLI and the bot will launch.
 
 ## Authorship
-Columbot is maintained by [Dominic Coletti](https://github.com/dominiccoletti).
+Columbot is maintained by [Dominic Coletti](https://github.com/dominiccoletti). Credit goes to [Erik Boesen](https://github.com/ErikBoesen) for Columbot, a modified version of Yalebot.
 
 ## License
 [GPL](LICENSE)
