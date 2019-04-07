@@ -7,7 +7,7 @@ from pick import pick
 import argparse
 from groupy.client import Client
 
-parser = argparse.ArgumentParser(description="Control Yalebot directly")
+parser = argparse.ArgumentParser(description="Control Columbot directly")
 parser.add_argument("verb", choices=("join", "leave", "send", "purge"))
 parser.add_argument("--token", default=os.environ.get("GROUPME_ACCESS_TOKEN"))
 parser.add_argument("--groups-file", default="groups.json")
@@ -67,10 +67,10 @@ if args.verb == "join":
     group_id = pick_user_group()
 
     bot = {
-        "name": read("Name", "Yalebot"),
+        "name": read("Name", "Columbot"),
         "group_id": group_id,
-        "avatar_url": read("Avatar URL", "https://i.groupme.com/310x310.jpeg.1c88aac983ff4587b15ef69c2649a09c"),
-        "callback_url": read("Callback URL", "https://yalebot.herokuapp.com/"),
+        "avatar_url": read("Avatar URL", "https://i.groupme.com/1512x1600.jpeg.89dea9830f914fd28e55097323af6fa5 "),
+        "callback_url": read("Callback URL", "https://colum-bot.herokuapp.com/"),
         "dm_notification": False,
     }
     result = requests.post(f"https://api.groupme.com/v3/bots?token={args.token}",

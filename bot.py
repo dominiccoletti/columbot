@@ -4,13 +4,12 @@ import re
 import requests
 import json
 import difflib
-from flask import Flask, request, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, request
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
-db = SQLAlchemy(app)
+with open("groups.json", "r") as f:
+    GROUPS = json.load(f)
 
 MAX_MESSAGE_LENGTH = 1000
 PREFIX = "!"
