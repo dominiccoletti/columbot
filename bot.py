@@ -169,7 +169,7 @@ def reply(message, group_id):
             reply(item, group_id)
         return
     data = {
-        "bot_id": [group_id],"a566095f9d5978417203c65f5e",
+        "bot_id": [group_id]["a566095f9d5978417203c65f5e"],
     }
     if isinstance(message, tuple):
         text, image = message
