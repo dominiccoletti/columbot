@@ -16,7 +16,7 @@ body {
     font-size: 16px;
     background: white;
     color: #333;
-    border-top: 8px solid #00356b;
+    border-top: 8px solid #730D00;
 }
 header, main, footer {
     padding: 10px 40px;
@@ -26,7 +26,7 @@ header {
 }
 header h1 {
     font-size: 100px;
-    color: #00356b;
+    color: #730D00;
     line-height: 1;
 }
 section {
@@ -36,7 +36,7 @@ section:last-of-type {
     margin-bottom: 0;
 }
 a {
-    color: #00356b;
+    color: #730D00;
 }
 select, input, .button {
     font: inherit;
@@ -58,10 +58,10 @@ label {
     display: block;
 }
 .button {
-    color: #00356b;
+    color: #730D00;
     background: none;
     padding: 8px 10px;
-    border: solid 2px #00356b;
+    border: solid 2px #730D00;
     text-decoration: none;
     vertical-align: middle;
     transform: perspective(1px) translateZ(0);
@@ -72,7 +72,7 @@ label {
 }
 .button:hover, .button:focus, .button:active {
     color: white;
-    background: #00356b;
+    background: #730D00;
     transition: 0.6s;
 }
 th, td {
