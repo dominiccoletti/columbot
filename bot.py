@@ -140,7 +140,7 @@ def webhook():
                     advice = ""
                 reply(f"Command not found. {advice}Use !help to view a list of commands.", group_id)
 
-        if "thank" in text.lower() and "yalebot" in text.lower():
+        if "thank" in text.lower() and "columbot" in text.lower():
             reply("You're welcome, " + forename + "! :)", group_id)
     if message["system"]:
         for option in system_responses:
@@ -201,54 +201,5 @@ def in_group(group_id):
     return db.session.query(db.exists().where(Bot.group_id == group_id)).scalar()
 
 
-@app.route("/manager", methods=["GET", "POST"])
-def manager():
-    access_token = request.args["access_token"]
-    if request.method == "POST":
-        # Build and send bot data
-        bot = {
-            "name": request.form["name"] or "Columbot",
-            "group_id": request.form["group_id"],
-            "avatar_url": request.form["avatar_url"] or "https://i.groupme.com/310x310.jpeg.1c88aac983ff4587b15ef69c2649a09c",
-            "callback_url": "https://colum-bot.herokuapp.com/",
-            "dm_notification": False,
-        }
-        me = requests.get(f"https://api.groupme.com/v3/users/me?token={access_token}").json()["response"]
-        result = requests.post(f"https://api.groupme.com/v3/bots?token={access_token}",
-                               json={"bot": bot}).json()["response"]["bot"]
 
-        # Store in database
-        registrant = Bot(result["group_id"], result["bot_id"], me["user_id"])
-        db.session.add(registrant)
-        db.session.commit()
-    groups = requests.get(f"https://api.groupme.com/v3/groups?token={access_token}").json()["response"]
-    bots = requests.get(f"https://api.groupme.com/v3/bots?token={access_token}").json()["response"]
-    if os.environ.get("DATABASE_URL") is not None:
-        groups = [group for group in groups if not Bot.query.get(group["group_id"])]
-        bots = [bot for bot in bots if Bot.query.get(bot["group_id"])]
-    return render_template("manager.html", access_token=access_token, groups=groups, bots=bots)
-
-
-class Bot(db.Model):
-    __tablename__ = "bots"
-    # TODO: store owner also
-    group_id = db.Column(db.String(16), unique=True, primary_key=True)
-    bot_id = db.Column(db.String(26), unique=True)
-    owner_id = db.Column(db.String(16))
-
-    def __init__(self, group_id, bot_id, owner_id):
-        self.group_id = group_id
-        self.bot_id = bot_id
-        self.owner_id = owner_id
-
-
-@app.route("/delete", methods=["POST"])
-def delete_bot():
-    data = request.get_json()
-    access_token = data["access_token"]
-    bot = Bot.query.get(data["group_id"])
-    req = requests.post(f"https://api.groupme.com/v3/bots/destroy?token={access_token}", json={"bot_id": bot.bot_id})
-    if req.ok:
-        db.session.delete(bot)
-        db.session.commit()
         return "ok", 200
