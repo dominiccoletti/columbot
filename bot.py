@@ -52,6 +52,7 @@ commands = {
     "weather": modules.Weather(),
     "kelly": modules.Kelly(),
     "sad": modules.Sad(),
+    "nato": modules.NATO(),
     "eightball": modules.EightBall(),
     "analytics": modules.Analytics(),
     "youtube": modules.YouTube(),
