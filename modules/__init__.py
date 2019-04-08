@@ -20,6 +20,7 @@ from .sad import Sad
 from .eightball import EightBall
 from .analytics import Analytics
 from .pick import Pick
+from .tiya import Tiya
 from .meme import Meme
 from .system import Welcome
 from .youtube import YouTube
