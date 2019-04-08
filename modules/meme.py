@@ -46,6 +46,12 @@ class Meme(Module, ImageUploader):
             "pocket": (
                 {"position": (570, 80), "font_size": self.SMALL_FONT_SIZE, "center": False},
             ),
+             "brain": (
+                {"position": (20, 146), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
+                {"position": (20, 450), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
+                {"position": (20, 745), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
+                {"position": (20, 1040), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
+            ),
         }
         self.DESCRIPTION = "Generate memes! List the desired template, and then captions each on a new line. " + self.list_templates()
 
