@@ -16,7 +16,7 @@ PREFIX = "!"
 
 static_commands = {
     "ping": "Pong!",
-	"spark": "", "https://i.groupme.com/960x960.jpeg.83b694dec83a40629c3ef63053cedf83.large"
+	"spark": ("", "https://i.groupme.com/960x960.jpeg.83b694dec83a40629c3ef63053cedf83.large"),
     "sam": "❗❗❗N O 💪 F L E X 💪 Z O N E ❗❗❗",
     "petition": "https://www.change.org/p/columbia-university-undergraduate-admissions-officers-let-dominic-coletti-in-off-the-columbia-waitlist?source_location=petitions_browse",
     "meetup": ("", "https://i.groupme.com/750x1200.jpeg.b0ca5f6e660a4356be2925222e6f8246.large"),
