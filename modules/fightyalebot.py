@@ -4,7 +4,7 @@ import random
 
 
 class Fightyalebot(Module):
-    DESCRIPTION = "Generate Elizabethan insults for our favorite person"
+    DESCRIPTION = "Generate Elizabethan insults for our favorite chatbot"
     primary_adjectives = []
     secondary_adjectives = []
     nouns = []
