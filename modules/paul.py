@@ -7,4 +7,4 @@ class Paul(Module):
     ARGC = 1
 
     def response(self, query, message):
-        return tinytext(query)
+        return tinytext.tinytext(query)
