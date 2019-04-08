@@ -80,7 +80,7 @@ commands = {
     "hema": modules.Hema(),
     "tiya": modules.Tiya(),
     "paul": modules.Paul(),
-    "paulraj": modules.Paulfraj(),
+    "paulraj": modules.Paulraj(),
 }
 system_responses = {
     "welcome": modules.Welcome(),
