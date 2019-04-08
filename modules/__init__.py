@@ -43,3 +43,4 @@ from .boink import Boink
 from .hema import Hema
 from .victor import Victor
 from .nato import NATO
+from .paul import Paul

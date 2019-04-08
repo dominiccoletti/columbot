@@ -79,6 +79,7 @@ commands = {
     "boink": modules.Boink(),
     "hema": modules.Hema(),
     "tiya": modules.Tiya(),
+    "paul": modules.Paul(),
 }
 system_responses = {
     "welcome": modules.Welcome(),
