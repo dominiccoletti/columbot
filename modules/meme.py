@@ -58,7 +58,7 @@ class Meme(Module, ImageUploader):
             ),
             "pikachu3": (
                 {"position": (10,15),"wrap": 22, "font_size": self.SMALL_FONT_SIZE},
-                {"position": (10,67.5),"wrap": 22,"font_size": self.SMALL_FONT_SIZE}
+                {"position": (10,67.5),"wrap": 22,"font_size": self.SMALL_FONT_SIZE},
                 {"position": (10,135),"wrap": 22,"font_size": self.SMALL_FONT_SIZE},
             )
         }
