@@ -52,6 +52,10 @@ class Meme(Module, ImageUploader):
                 {"position": (20, 745), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
                 {"position": (20, 1040), "wrap": 22, "font_size": self.LARGE_FONT_SIZE, "center": False, "center_vertical": True},
             ),
+            "pikachu": (
+                {"position": (50,15),"wrap": 22, "font_size": self.FONT_SIZE, "center": False, "Center_vertical": False},
+                {"position": (10,100),"wrap": 22,"font_size": self.FONT_SIZE, "center": False, "Center_vertical": False},
+            )
         }
         self.DESCRIPTION = "Generate memes! List the desired template, and then captions each on a new line. " + self.list_templates()
 
