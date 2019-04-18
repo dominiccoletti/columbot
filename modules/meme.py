@@ -60,7 +60,10 @@ class Meme(Module, ImageUploader):
                 {"position": (10,15),"wrap": 22, "font_size": self.SMALL_FONT_SIZE},
                 {"position": (10,67.5),"wrap": 22,"font_size": self.SMALL_FONT_SIZE},
                 {"position": (10,135),"wrap": 22,"font_size": self.SMALL_FONT_SIZE},
-            )
+            ),
+            "ask": (
+                {"position": (405, 450), "center_vertical": True},
+            ),
         }
         self.DESCRIPTION = "Generate memes! List the desired template, and then captions each on a new line. " + self.list_templates()
 
