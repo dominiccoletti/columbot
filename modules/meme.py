@@ -65,8 +65,8 @@ class Meme(Module, ImageUploader):
                 {"position": (405, 450), "center_vertical": True},
             ),
             "whip": (
-                {"position": (406, 438), "font_size": self.LARGE_FONT_SIZE, "center_vertical": True},
-                {"position": (160, 620), "font_size": self.LARGE_FONT_SIZE, "center_vertical": True},
+                {"position": (406, 438), "color": self.WHITE, "center_vertical": True},
+                {"position": (160, 620), "color": self.WHITE, "center_vertical": True},
             ),
         }
         self.DESCRIPTION = "Generate memes! List the desired template, and then captions each on a new line. " + self.list_templates()
